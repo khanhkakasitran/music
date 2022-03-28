@@ -1,0 +1,139 @@
+.musicControls {
+  background: #334155;
+  color: var(--white);
+  text-align: center;
+  height: 90px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  z-index: 4;
+}
+
+.musicControls .icon-pause {
+  display: none;
+}
+
+.musicControls.playing .icon-pause {
+  display: inline-block;
+}
+
+.musicControls.playing .icon-play {
+  display: none;
+}
+
+.playerControls {
+  height: 100%;
+  width: 65%;
+  margin-right: 10%;
+}
+
+.playerSong,
+.playerOption {
+  /* width: 100%; */
+  height: 100%;
+  display: flex;
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.control .btn {
+  color: #f1f1f1;
+  padding: 15px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.control .btn.active {
+  color: #2dd4bf;
+}
+
+.control .btn-toggle-play {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #2dd4bf;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2dd4bf;
+}
+
+.progessControl {
+  flex: 1;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.progressBlock {
+  height: 18px;
+  width: 100%;
+  display: flex;
+  margin-bottom: 5px;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.progressBar {
+  flex: 1 1;
+  opacity: 1;
+  z-index: 5;
+  height: 6px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 6px;
+  will-change: opacity;
+  -webkit-appearance: none;
+  transition: opacity 0.2s;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.progressBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: #2dd4bf;
+  cursor: pointer;
+}
+
+.trackTime,
+.durationtime {
+  width: 55px;
+  margin: 0 5px;
+  display: block;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #f1f1f1;
+}
+.progressTrack {
+  left: 50%;
+  height: 3px;
+  border-radius: 20px;
+  position: absolute;
+  transform: translate(-50%, 0);
+  background: #ffffff1a;
+}
+.progressTrackUpdate {
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  border-radius: 20px;
+  position: absolute;
+  background-color: #2dd4bf;
+}

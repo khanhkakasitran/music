@@ -1,0 +1,45 @@
+.header {
+    background: rgba(0, 0, 0, 0.5);
+    height: 50px;
+    width: calc(100% - 272px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 0.5rem 2rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 5;
+}
+
+.headerWithSearch {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.headerButton {
+    padding: 0;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.headerButton i {
+    width: 24px;
+    height: 25px;
+    display: block;
+    text-align: center;
+    font-size: 2.2rem;
+    margin-right: 20px;
+    color: #dadada;
+}
+
+.buttonDisabled i {
+    opacity: 0.3 !important;
+    cursor: default !important;
+    user-select: none !important;
+}

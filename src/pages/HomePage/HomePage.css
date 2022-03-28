@@ -1,0 +1,736 @@
+.homePage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 4vw 0;
+  margin-top: 30px;
+}
+
+.homePage .row {
+  margin-left: -15px;
+  margin-right: -15px;
+  display: flex;
+  flex-wrap: wrap;
+  backface-visibility: hidden;
+}
+
+/* =======================TAB SONGS & SLIDER========================== */
+
+.homePage .containerControl {
+  margin-bottom: 50px;
+}
+
+.homePage .containerHeader {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.homePage .containerHeaderTitle {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  line-height: 2.4rem;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.homePage .containerHeaderTitle:hover {
+  color: #2dd4bf;
+}
+
+.homePage .containerHeaderTitle > h3 > i {
+  font-size: 2rem;
+  line-height: 2rem;
+  position: relative;
+  top: 2px;
+}
+
+.homePage .containerHeaderActions {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.homePage .containerHeaderActions .containerMoveBtn {
+  font-size: 2rem;
+  line-height: 2rem;
+  width: 26px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.homePage .containerHeaderActions .containerMoveBtn .disabled {
+  opacity: 0.3 !important;
+  cursor: default !important;
+  user-select: none !important;
+  margin-right: 10px;
+}
+
+.homePage .containerPlaymusic {
+  margin: 0;
+  width: 100%;
+  height: 244px;
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.homePage .containerSlide {
+  width: 290px;
+  /* height: 100%; */
+  height: 0%;
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+  justify-content: flex-end;
+}
+
+.homePage .containerSlide .containerSlideShow {
+  width: 230px;
+  height: 244px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.homePage .containerSlide .containerSlideShow .containerSlideItem {
+  width: 230px;
+  height: 230px;
+  position: absolute;
+  transition: all 0.9s;
+  backface-visibility: hidden;
+  will-change: transform, opacity;
+  transform: perspective(1px) translateZ(0);
+}
+
+.containerSlideShow .containerSlideItem .containerSlideImg {
+  width: 100%;
+  /* padding-top: 100%; */
+  padding-top: 50%;
+  border-radius: 5px;
+  height: 215px;
+}
+
+.homePage .containerPlaylist {
+  flex-grow: 1;
+  min-width: 0;
+  height: 92%;
+  display: flex;
+  flex-shrink: 1;
+  flex-direction: column;
+}
+
+.homePage .songsContainerList {
+  table-layout: auto;
+  width: 100%;
+  font-size: 15px;
+  padding: 0 30px;
+  border-collapse: collapse;
+}
+
+.homePage .songsContainerMain > tr > td > img {
+  margin-right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+.homePage td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.homePage .songsContainerMain > tr:hover,
+tr.active {
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  color: #2dd4bf;
+}
+
+/* ==========================TAB PLAYLIST===================== */
+
+.homePage .containerPlaylist .playlistList {
+  flex: 1;
+  display: flex;
+  font-weight: 500;
+  font-size: 1.2rem;
+  flex-direction: column;
+  overflow: hidden overlay;
+  scroll-behavior: smooth;
+  justify-content: flex-start;
+  will-change: scroll-position;
+}
+
+.homePage .containerPlaylist .playlistList::-webkit-scrollbar {
+  display: none;
+  width: 2px;
+}
+
+.homePage .containerPlaylist .playlistList:hover::-webkit-scrollbar {
+  display: block;
+}
+
+.homePage .containerPlaylist .playlistList::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background: #2dd4bf;
+}
+
+.homePage .containerPlaylist .playlistList::-webkit-scrollbar-track {
+  border-radius: 15px;
+  background: transparent;
+}
+
+.homePage .noWrap {
+  display: flex;
+  scroll-behavior: smooth;
+  will-change: scroll-position;
+  overflow: overlay hidden !important;
+}
+
+.homePage .noWrap::-webkit-scrollbar {
+  display: none;
+}
+
+.homePage .noWrap::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background: #2dd4bf;
+}
+
+.homePage .noWrap::-webkit-scrollbar-track {
+  border-radius: 15px;
+  background: transparent;
+}
+
+.homePage .rowItem {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  backface-visibility: hidden;
+  will-change: scroll-position;
+}
+
+.homePage .itemPlaylist {
+  padding: 0 15px;
+}
+
+.homePage .playlistContainer {
+  margin: 0;
+  width: 100%;
+  height: 244px;
+  margin-bottom: 25px;
+}
+
+.homePage .playlistCreate {
+  width: 180px;
+  height: 245px;
+}
+
+.homePage .rowItemContainer {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.homePage .flexCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.homePage .itemCreateProperties {
+  cursor: pointer;
+  background: linear-gradient(33deg, #2dd4bf -7%, #0369a1 117%);
+}
+
+.homePage .albumsCreateIcon {
+  width: 47px;
+  height: 47px;
+  margin-bottom: 15px;
+  font-size: 4.9rem;
+  font-weight: 100;
+  line-height: 4.7rem;
+  text-align: center;
+  color: var(--text-color);
+  -webkit-text-stroke: 2px #992392;
+}
+
+.homePage .textCenter {
+  text-align: center;
+}
+
+.homePage .albumsCreateAnnotate {
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  color: #f1f1f1;
+}
+
+.homePage .flexTopLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.homePage .rowItemDisplay {
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.homePage .br5 {
+  border-radius: 5px !important;
+}
+
+.homePage .rowItemImg {
+  width: 179px;
+  height: 179px;
+  border-radius: 5px;
+  will-change: transform;
+  transition: transform 0.7s;
+  backface-visibility: hidden;
+  transform: perspective(1px) translateZ(0);
+}
+
+.homePage .rowItemInfo {
+  flex: 1;
+  width: 100%;
+}
+
+.homePage .rowInfoName {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  font-weight: 500;
+  margin: 8px 0 4px;
+  font-size: 2rem;
+  position: relative;
+  line-height: 2rem;
+  color: #f1f1f1;
+  text-decoration: inherit;
+}
+
+.homePage .rowInfoName:hover {
+  color: #2dd4bf;
+}
+
+.homePage .rowInfoCreator {
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+  letter-spacing: 0;
+  margin: 0;
+  color: rgb(255 255 255 / 50%);
+}
+
+/* ============================TAB ALBUMS================== */
+.homePage .wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.homePage .wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.homePage .wrap::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background: #2dd4bf;
+}
+
+.homePage .wrap::-webkit-scrollbar-track {
+  border-radius: 15px;
+  background: transparent;
+}
+
+.homePage .rowItem {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  backface-visibility: hidden;
+  will-change: scroll-position;
+}
+
+.homePage .itemAlbums {
+  padding: 0 15px;
+  margin-bottom: 30px;
+}
+
+.homePage .albumsContainer {
+  margin: 0;
+  width: 103%;
+  height: 244px;
+  margin-bottom: 25px;
+}
+
+.homePage .rowItemContainer {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.homePage .flexTopLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.homePage .rowItemDisplay {
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.homePage .br5 {
+  border-radius: 5px !important;
+}
+
+.homePage .rowItemImg {
+  width: 179px;
+  height: 179px;
+  border-radius: 5px;
+  will-change: transform;
+  transition: transform 0.7s;
+  backface-visibility: hidden;
+  transform: perspective(1px) translateZ(0);
+}
+
+.homePage .rowItemInfo {
+  flex: 1;
+  width: 100%;
+}
+
+.homePage .albumsInfoName {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  font-weight: 500;
+  margin: 8px 0 4px;
+  font-size: 1.6rem;
+  position: relative;
+  line-height: 2rem;
+  color: #f1f1f1;
+  text-decoration: inherit;
+}
+
+.homePage .albumsInfoName:hover {
+  color: #2dd4bf;
+}
+
+/* ============================TAB MV====================== */
+.homePage .wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.homePage .wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.homePage .wrap::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background: #2dd4bf;
+}
+
+.homePage .wrap::-webkit-scrollbar-track {
+  border-radius: 15px;
+  background: transparent;
+}
+
+.homePage .rowItem {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  backface-visibility: hidden;
+  will-change: scroll-position;
+}
+
+.homePage .itemMV {
+  padding: 0 15px;
+  margin-bottom: 30px;
+}
+
+.homePage .mvContainer {
+  margin: 0;
+  width: 103%;
+  height: 244px;
+  margin-bottom: 25px;
+}
+
+.homePage .rowItemContainer {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.homePage .flexTopLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.homePage .rowItemDisplay {
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.homePage .br5 {
+  border-radius: 5px !important;
+}
+
+.homePage .rowItemImg {
+  width: 179px;
+  height: 179px;
+  border-radius: 5px;
+  will-change: transform;
+  transition: transform 0.7s;
+  backface-visibility: hidden;
+  transform: perspective(1px) translateZ(0);
+}
+
+.homePage .rowItemImg.imgMV {
+  width: 318px;
+  height: 179px;
+}
+
+.homePage .rowItemInfo {
+  flex: 1;
+  width: 100%;
+}
+
+.homePage .mediaMV {
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  flex-basis: auto;
+  margin-right: 10px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.homePage .rowItemInfo .mediaMV {
+  flex-basis: 100%;
+}
+
+.homePage .rowItem .mediaMV {
+  margin-right: 0;
+}
+
+.homePage .mediaThumb {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.homePage .mediaThumb .mediaThumbImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50% !important;
+}
+
+.homePage .mediaMVInfo {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.homePage .infoTitle {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2rem;
+  color: #fff;
+  margin: 0;
+}
+
+.homePage .infoTitle:hover {
+  color: #2dd4bf;
+  cursor: pointer;
+}
+
+.homePage .infoAuthor {
+  height: 17px;
+  margin: 3px 0 0;
+  font-weight: 400;
+  overflow: hidden;
+  white-space: nowrap;
+  color: rgb(255 255 255 / 50%);
+  font-size: 1.2rem;
+  letter-spacing: 0;
+  line-height: 1.7rem;
+  text-overflow: ellipsis;
+}
+
+/* ========================TAB ARTIST============== */
+.homePage .wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.homePage .wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.homePage .wrap::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background: #2dd4bf;
+}
+
+.homePage .wrap::-webkit-scrollbar-track {
+  border-radius: 15px;
+  background: transparent;
+}
+
+.homePage .rowItem {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  backface-visibility: hidden;
+  will-change: scroll-position;
+}
+
+.homePage .itemArtist {
+  padding: 0 15px;
+  margin-bottom: 30px;
+}
+
+.homePage .artistContainer {
+  margin: 0;
+  width: 103%;
+  height: 244px;
+  margin-bottom: 25px;
+}
+
+.homePage .rowItemContainer {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.homePage .flexTopLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.homePage .rowItemDisplay {
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.homePage .rowItemDisplay .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+}
+
+.homePage .rowItemImg {
+  width: 179px;
+  height: 179px;
+  border-radius: 5px;
+  will-change: transform;
+  transition: transform 0.7s;
+  backface-visibility: hidden;
+  transform: perspective(1px) translateZ(0);
+}
+
+.homePage .rowItemInfo {
+  flex: 1;
+  width: 100%;
+}
+
+.homePage .artistInfo {
+  position: relative;
+  top: 0;
+}
+
+.homePage .albumsInfoName {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  font-weight: 500;
+  margin: 8px 0 4px;
+  font-size: 1.6rem;
+  position: relative;
+  line-height: 2rem;
+  color: #f1f1f1;
+  text-decoration: inherit;
+}
+
+.homePage .rowInfoIcon {
+  color: #fff;
+  height: 13px;
+  padding: 0 0 3px 0;
+  font-size: 1rem;
+  line-height: 1rem;
+  display: inline-block;
+  position: relative;
+  transform: translateY(-2.1px);
+}
+
+.homePage .textCenter {
+  align-items: center;
+}
+
+.homePage .albumsInfoName:hover {
+  color: #2dd4bf;
+  cursor: pointer;
+}
+
+.homePage .rowItemBtn {
+  margin: -5px auto -15px;
+}
+
+.homePage .rowItemBtn button.isSmall {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #2dd4bf;
+}
+
+.homePage .button.isSmall {
+  line-height: 1.4rem;
+  font-size: 1.4rem;
+  padding: 6px 19px;
+}
+
+.homePage .rowItemBtn button.buttonPrimary {
+  background-color: #2dd4bf;
+  color: #f1f1f1;
+}
+
+.homePage .button {
+  border-radius: 100px;
+  cursor: pointer;
+}

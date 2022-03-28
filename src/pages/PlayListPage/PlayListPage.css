@@ -1,0 +1,175 @@
+.playListPage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 4vw 0;
+  margin-top: 30px;
+}
+
+.playListPage .playlistHeader {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.playListPage .playlistHeaderTitle {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  line-height: 2.4rem;
+  margin: 0;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+.playListPage .playlistHeaderTitle:hover {
+  color: #2dd4bf;
+  cursor: pointer;
+}
+
+
+.playListPage .wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.playListPage .noWrap::-webkit-scrollbar {
+  display: none;
+}
+
+.playListPage .noWrap::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background: #2dd4bf;
+}
+
+.playListPage .noWrap::-webkit-scrollbar-track {
+  border-radius: 15px;
+  background: transparent;
+}
+
+.playListPage .rowItem {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  backface-visibility: hidden;
+  will-change: scroll-position;
+}
+
+.playListPage .itemPlaylist {
+  padding: 0 15px;
+  margin-bottom: 30px;
+}
+
+.playListPage .playlistContainer {
+  margin: 0;
+  width: 103%;
+  height: 244px;
+  margin-bottom: 25px;
+}
+
+.playListPage .playlistCreate {
+  width: 180px;
+  height: 245px;
+}
+
+.playListPage .rowItemContainer {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.playListPage .flexCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.playListPage .itemCreateProperties {
+  cursor: pointer;
+  background: linear-gradient(33deg, #2dd4bf -7%, #0369a1 117%);
+}
+
+.playListPage .albumsCreateIcon {
+  width: 47px;
+  height: 47px;
+  margin-bottom: 15px;
+  font-size: 4.9rem;
+  font-weight: 100;
+  line-height: 4.7rem;
+  text-align: center;
+  color: var(--text-color);
+  -webkit-text-stroke: 2px #992392;
+}
+
+.playListPage .textCenter {
+  text-align: center;
+}
+
+.playListPage .albumsCreateAnnotate {
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  color: #f1f1f1;
+}
+
+.playListPage .flexTopLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.playListPage .rowItemDisplay {
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.playListPage .br5 {
+  border-radius: 5px !important;
+}
+
+.playListPage .rowItemImg {
+  width: 179px;
+  height: 179px;
+  border-radius: 5px;
+  will-change: transform;
+  transition: transform 0.7s;
+  backface-visibility: hidden;
+  transform: perspective(1px) translateZ(0);
+}
+
+.playListPage .rowItemInfo {
+  flex: 1;
+  width: 100%;
+}
+
+.playListPage .rowInfoName {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  font-weight: 500;
+  margin: 8px 0 4px;
+  font-size: 2rem;
+  position: relative;
+  line-height: 2rem;
+  color: #f1f1f1;
+  text-decoration: inherit;
+}
+
+.playListPage .rowInfoCreator {
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+  letter-spacing: 0;
+  margin: 0;
+  color: rgb(255 255 255 / 50%);
+}

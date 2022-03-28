@@ -1,0 +1,182 @@
+.mvPage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 4vw 0;
+  margin-top: 30px;
+}
+
+.mvPage .mvHeader {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.mvPage .mvHeaderTitle {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  line-height: 2.4rem;
+  margin: 0;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+.mvPage .mvHeaderTitle:hover {
+  color: #2dd4bf;
+  cursor: pointer;
+}
+
+.mvPage .wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mvPage .wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.mvPage .wrap::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background: #2dd4bf;
+}
+
+.mvPage .wrap::-webkit-scrollbar-track {
+  border-radius: 15px;
+  background: transparent;
+}
+
+.mvPage .rowItem {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  backface-visibility: hidden;
+  will-change: scroll-position;
+}
+
+.mvPage .itemMV {
+  padding: 0 15px;
+  margin-bottom: 30px;
+}
+
+.mvPage .mvContainer {
+  margin: 0;
+  width: 103%;
+  height: 244px;
+  margin-bottom: 25px;
+}
+
+.mvPage .rowItemContainer {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mvPage .flexTopLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.mvPage .rowItemDisplay {
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.mvPage .br5 {
+  border-radius: 5px !important;
+}
+
+.mvPage .rowItemImg {
+  width: 179px;
+  height: 179px;
+  border-radius: 5px;
+  will-change: transform;
+  transition: transform 0.7s;
+  backface-visibility: hidden;
+  transform: perspective(1px) translateZ(0);
+}
+
+.mvPage .rowItemImg.imgMV {
+  width: 318px;
+  height: 179px;
+}
+
+.mvPage .rowItemInfo {
+  flex: 1;
+  width: 100%;
+}
+
+.mvPage .mediaMV {
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  flex-basis: auto;
+  margin-right: 10px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mvPage .rowItemInfo .mediaMV {
+  flex-basis: 100%;
+}
+
+.mvPage .rowItem .mediaMV {
+  margin-right: 0;
+}
+
+.mvPage .mediaThumb {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.mvPage .mediaThumb .mediaThumbImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50% !important;
+}
+
+.mvPage .mediaMVInfo {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.mvPage .infoTitle {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2rem;
+  color: #fff;
+  margin: 0;
+}
+
+.mvPage .infoTitle:hover {
+  color: #2dd4bf;
+}
+
+.mvPage .infoAuthor {
+  height: 17px;
+  margin: 3px 0 0;
+  font-weight: 400;
+  overflow: hidden;
+  white-space: nowrap;
+  color: rgb(255 255 255 / 50%);
+  font-size: 1.2rem;
+  letter-spacing: 0;
+  line-height: 1.7rem;
+  text-overflow: ellipsis;
+}

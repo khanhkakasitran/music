@@ -1,0 +1,18 @@
+.mainContainer {
+    height: 87%;
+    width: calc(100% - 272px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 0.5rem 2rem;
+    position: relative;
+    top: calc(17% - 6%);
+    left: 17%;
+    z-index: 2;
+    overflow: hidden overlay;
+}
+
+.mainContainer::-webkit-scrollbar {
+    width: 20px;
+  }

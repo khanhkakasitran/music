@@ -1,0 +1,129 @@
+.albumsPage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 4vw 0;
+  margin-top: 30px;
+}
+
+.albumsPage .albumsHeader {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.albumsPage .albumsHeaderTitle {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  line-height: 2.4rem;
+  margin: 0;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+.albumsPage .albumsHeaderTitle:hover {
+  color: #2dd4bf;
+  cursor: pointer;
+}
+
+.albumsPage .wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.albumsPage .wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.albumsPage .wrap::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background: #2dd4bf;
+}
+
+.albumsPage .wrap::-webkit-scrollbar-track {
+  border-radius: 15px;
+  background: transparent;
+}
+
+.albumsPage .rowItem {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  backface-visibility: hidden;
+  will-change: scroll-position;
+}
+
+.albumsPage .itemAlbums {
+  padding: 0 15px;
+  margin-bottom: 30px;
+}
+
+.albumsPage .albumsContainer {
+  margin: 0;
+  width: 103%;
+  height: 244px;
+  margin-bottom: 25px;
+}
+
+.albumsPage .rowItemContainer {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.albumsPage .flexTopLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.albumsPage .rowItemDisplay {
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.albumsPage .br5 {
+  border-radius: 5px !important;
+}
+
+.albumsPage .rowItemImg {
+  width: 179px;
+  height: 179px;
+  border-radius: 5px;
+  will-change: transform;
+  transition: transform 0.7s;
+  backface-visibility: hidden;
+  transform: perspective(1px) translateZ(0);
+}
+
+.albumsPage .rowItemInfo {
+  flex: 1;
+  width: 100%;
+}
+
+.albumsPage .albumsInfoName {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  font-weight: 500;
+  margin: 8px 0 4px;
+  font-size: 1.6rem;
+  position: relative;
+  line-height: 2rem;
+  color: #f1f1f1;
+  text-decoration: inherit;
+}
+
+.albumsPage .albumsInfoName:hover {
+  color: #2dd4bf;
+}
